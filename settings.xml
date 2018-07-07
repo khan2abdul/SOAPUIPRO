@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Default SoapUI Pro Project" soapui-version="6.0.0" resourceRoot="" id="61e04082-3ec6-4977-b3af-d6600f20ae9b" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="QA" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+    <con:description>Sends requests to SOAP- and REST-based local virtual services on different ports.</con:description>
+    <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+        <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
+        <con:setting id="GeneratableJUnitReport@Folder">C:\dev\htmlreports</con:setting>
+        <con:setting id="ReportTitle">SoapUI Report</con:setting>
+    </con:settings>
+    <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>https://github.com/khan2abdul/SOAPUIPRO.git</con:repositoryIdentifier></con:vcsConfiguration>
+    
+    
+    
+    
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:requirements/>
+    <con:properties>
+        <con:property>
+            <con:name>Some Property</con:name>
+            <con:value>with a value</con:value>
+        </con:property>
+    </con:properties>
+    <con:wssContainer/>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+    
+    <con:reporting/><con:beforeRunScript>virtRunner.run("ServiceSoapBinding MockService")
+        virtRunner.run("RESTMockService")
+    </con:beforeRunScript>
+    <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+        <con:script>log.info(request.getEndpoint())</con:script>
+    </con:eventHandlers>
+    <con:sensitiveInformation/>
+    <con:environment id="ca5c8dd6-0f99-4304-9014-7fadd47abe89" name="QA"><con:service type="SOAP" name="ServiceSoapBinding"><con:endpoint authProfile="No Authorization">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint></con:service><con:service type="REST" name="http://localhost:8084"><con:endpoint authProfile="No Authorization">http://localhost:8084</con:endpoint></con:service><con:property><con:name>Some Property</con:name><con:value/></con:property><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment><con:environment id="8c335e80-a68d-434d-8833-5898d7c128e0" name="Stage"><con:service type="SOAP" name="ServiceSoapBinding"><con:endpoint authProfile="No Authorization"/></con:service><con:service type="REST" name="http://localhost:8084"><con:endpoint authProfile="No Authorization"/></con:service><con:property><con:name>Some Property</con:name><con:value/></con:property><con:databaseConnectionContainer/><con:jmsConnectionContainer/></con:environment><con:authRepository/>
+    <con:environmentSpec><con:entry environmentId="ca5c8dd6-0f99-4304-9014-7fadd47abe89"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="8c335e80-a68d-434d-8833-5898d7c128e0"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec><con:tags/>
+</con:soapui-project>
