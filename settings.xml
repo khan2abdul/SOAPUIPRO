@@ -10,7 +10,7 @@
         <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
         <con:setting id="GeneratableJUnitReport@Folder">C:\dev\htmlreports</con:setting>
         <con:setting id="ReportTitle">SoapUI Report</con:setting>
-    </con:settings>
+    <con:setting id="61e04082-3ec6-4977-b3af-d6600f20ae9bfileName">Default-SoapUI-Pro-Project</con:setting></con:settings>
     <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>https://github.com/khan2abdul/SOAPUIPRO.git</con:repositoryIdentifier></con:vcsConfiguration>
     
     
